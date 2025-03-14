@@ -4,6 +4,6 @@ Type=Application
 Name=DBF to CSV Converter
 Comment=Convert DBF files to CSV format
 Exec=/usr/bin/dbf-converter
-Icon=dbf-converter
+Icon=/usr/share/icons/hicolor/128x128/apps/dbf-converter.png
 Terminal=false
 Categories=Utility;Development;

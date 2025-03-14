@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QH
                              QMessageBox, QGroupBox, QFrame, QListWidget, QSplitter,
                              QAbstractItemView)
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QIcon
 from dbfread import DBF
 
 
@@ -65,6 +65,7 @@ class DBFtoCSVConverter(QMainWindow):
         # Call the parent class initializer
         super(DBFtoCSVConverter, self).__init__()
 
+        self.setObjectName("dbf-converter")
         # Configure the main window
         self.setWindowTitle("DBF to CSV Converter")
         self.setMinimumSize(800, 600)
@@ -308,7 +309,20 @@ def main():
         return
 
     app = QApplication(sys.argv)
+
+    app.setApplicationName("DBF to CSV Converter")
+    app.setApplicationVersion("1.0.0")
+
+    app.setDesktopFileName("dbf-converter.desktop")
+
     converter = DBFtoCSVConverter()
+
+    icon_path = "/usr/share/icons/hicolor/128x128/apps/dbf-converter.png"
+    app.setWindowIcon(QIcon(icon_path))
+    converter.setWindowIcon(QIcon(icon_path))
+
+    converter.setProperty("windowIcon", QIcon(icon_path))
+
     converter.show()
     sys.exit(app.exec_())
 
