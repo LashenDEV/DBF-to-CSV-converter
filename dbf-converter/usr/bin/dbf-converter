@@ -1,0 +1,5 @@
+#!/bin/bash
+VENV_PYTHON=/usr/lib/dbf-converter/venv/bin/python3
+export PYTHONPATH=/usr/lib/dbf-converter/venv/lib/python3*/site-packages:$PYTHONPATH
+
+$VENV_PYTHON /usr/lib/dbf-converter/dbf_converter.py "$@"

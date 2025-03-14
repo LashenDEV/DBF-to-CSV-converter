@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DBF to CSV Converter
+Comment=Convert DBF files to CSV format
+Exec=/usr/bin/dbf-converter
+Icon=dbf-converter
+Terminal=false
+Categories=Utility;Development;

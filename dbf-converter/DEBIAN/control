@@ -1,0 +1,10 @@
+Package: dbf-converter
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.6), python3-pyqt5 (>= 5.10.0), python3-venv
+Maintainer: Your Name <your.email@example.com>
+Description: DBF to CSV Converter
+ A simple GUI tool to convert DBF files to CSV format.
+ Built with Python and PyQt5.
