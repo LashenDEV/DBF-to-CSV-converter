@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+# Just make the executable executable
+chmod +x /usr/bin/dbf-converter
+
+echo "DBF to CSV Converter installed successfully!"
+
+#DEBHELPER#
+exit 0

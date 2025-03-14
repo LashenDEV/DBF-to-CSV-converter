@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: dbf-converter
+Source: <your-source-repo-url>
+
+Files: *
+Copyright: <year> <your-name>
+License: GPL-3.0+

@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+import sys
+import subprocess
+import os
+
+# Check for required modules before importing
+required_modules = ['PyQt5', 'dbfread']
+missing_modules = []
+
+for module in required_modules:
+    try:
+        __import__(module)
+    except ImportError:
+        missing_modules.append(module)
+
+# If modules are missing, guide the user
+if missing_modules:
+    print("Missing required Python modules: " + ", ".join(missing_modules))
+    print("\nPlease install them using one of these methods:")
+    print("1. System packages (recommended):")
+    print("   sudo apt install python3-pyqt5 python3-dbfread")
+    print("\n2. Or using a virtual environment:")
+    print("   python3 -m venv ~/.venvs/dbf-converter")
+    print("   ~/.venvs/dbf-converter/bin/pip install PyQt5 dbfread")
+    print("   Then run: ~/.venvs/dbf-converter/bin/python /usr/lib/dbf-converter/dbf_converter.py")
+    sys.exit(1)
+
+# If all modules are available, run the application
+sys.path.append('/usr/lib/dbf-converter-1.0.0')
+from dbf_converter import main
+
+if __name__ == "__main__":
+    main()
